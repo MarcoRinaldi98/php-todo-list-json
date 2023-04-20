@@ -9,15 +9,21 @@
     <!-- Titolo della pagina -->
     <title> TodoList </title>
 </head>
-<body class="d-flex align-item-center justify-content-center">
+<body class="d-flex align-item-center justify-content-center bg-success-subtle">
 
-    <div id="app">
+    <div id="app" class="p-2 my-5 border border-primary bg-primary-subtle rounded-3">
         <div class="container-sm py-5">
+
         <ul class="list-group">
             <li v-for="todo in todoList" class="list-group-item">
                 {{ todo }}
             </li>
         </ul>
+
+        <div class="input-group mt-3">
+            <input type="text" class="form-control" v-model="todoItem" />
+            <button @click="addTodo" class="btn btn-outline-primary" type="button">Add ToDo</button>
+        </div>
     </div>
 
     
@@ -26,6 +32,6 @@
     <!-- Link di collegamento al cdn di axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.6/axios.min.js" integrity="sha512-06NZg89vaTNvnFgFTqi/dJKFadQ6FIglD6Yg1HHWAUtVFFoXli9BZL4q4EO1UTKpOfCfW5ws2Z6gw49Swsilsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Link di collegamento al mio foglio js  -->
-    <script src='main.js'></script>
+    <script src="main.js"></script>
 </body>
 </html>
