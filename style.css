@@ -1,0 +1,16 @@
+/* Style */
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Regole CSS generali */
+html {
+    font-family: sans-serif;
+}
+
+.done {
+    text-decoration: line-through;
+}

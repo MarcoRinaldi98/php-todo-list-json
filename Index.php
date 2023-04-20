@@ -9,14 +9,14 @@
     <!-- Titolo della pagina -->
     <title> TodoList </title>
 </head>
-<body class="d-flex align-item-center justify-content-center bg-success-subtle">
+<body class="d-flex align-item-center justify-content-center bg-warning-subtle">
 
     <div id="app" class="p-2 my-5 border border-primary bg-primary-subtle rounded-3">
         <div class="container-sm py-5">
 
         <ul class="list-group">
-            <li v-for="todo in todoList" class="list-group-item">
-                {{ todo }}
+            <li v-for="(todo, index) in todoList" class="list-group-item done">
+                {{ todo.text }}
             </li>
         </ul>
 
