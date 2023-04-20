@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link di collegamento al cdn di bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Link di collegamento al foglio di stile personalizzato -->
+    <link rel="stylesheet" href="style.css">
     <!-- Titolo della pagina -->
     <title> TodoList </title>
 </head>
@@ -15,7 +17,7 @@
         <div class="container-sm py-5">
 
         <ul class="list-group">
-            <li v-for="(todo, index) in todoList" class="list-group-item done">
+            <li v-for="(todo, index) in todoList" class="list-group-item ms_point" :key="index" @click="todo.done? todo.done = false: todo.done = true" :class="todo.done? 'text-decoration-line-through':''">
                 {{ todo.text }}
             </li>
         </ul>

@@ -11,7 +11,7 @@
         ],
         [
             'text' => 'accendere la tv',
-            'done' => true
+            'done' => false
         ],
         [
             'text' => 'Andare a fare la spesa',
@@ -30,6 +30,7 @@
         ];
 
         array_push($todoList, $newTodo);
+
     } 
 
     header('Conent-Type: application/json'); //specifico al broswer che deve utilizzare questa informazione come JSON
