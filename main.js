@@ -31,6 +31,7 @@ createApp({
             })
         }
     },
+    // Funzioni all'avvio
     mounted() {
         this.readList();
     }

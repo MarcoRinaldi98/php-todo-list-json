@@ -11,6 +11,7 @@
     <!-- Titolo della pagina -->
     <title> TodoList </title>
 </head>
+<!-- Corpo della pagina -->
 <body class="d-flex align-item-center justify-content-center bg-warning-subtle">
 
     <div id="app" class="p-2 my-5 border border-primary bg-primary-subtle rounded-3">
