@@ -1,0 +1,22 @@
+[
+    {
+        "text": "Preparare da mangiare",
+        "done": false
+    },
+    {
+        "text": "Pulire la casa",
+        "done": false
+    },
+    {
+        "text": "accendere la tv",
+        "done": false
+    },
+    {
+        "text": "Andare a fare la spesa",
+        "done": false
+    },
+    {
+        "text": "Andare a dormire presto",
+        "done": false
+    }
+]

@@ -7,6 +7,7 @@ createApp({
             todoItem: ''
         }
     },
+    // Funzioni
     methods: {
         // Funzione per leggere il contenuto dell'array situata in script.php
         readList() {

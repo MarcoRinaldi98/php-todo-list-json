@@ -1,35 +1,20 @@
 <?php
-    //array associativa
-    $todoList = [
-        [
-            'text' => 'Preparare da mangiare',
-            'done' => false
-        ],
-        [
-            'text' => 'Pulire la casa',
-            'done' => false
-        ],
-        [
-            'text' => 'accendere la tv',
-            'done' => false
-        ],
-        [
-            'text' => 'Andare a fare la spesa',
-            'done' => false
-        ],
-        [
-            'text' => 'Andare a dormire presto',
-            'done' => false
-        ]
-    ];
+
+    if(file_exists('database.json')) {
+        $string = file_get_contents('database.json'); // recupero la mia array dal mio "database" esterno
+        $todoList = json_decode($string, true); // trasformo la stringa json recuperata in precedenza in una stringa php
+    } else {
+        $todoList = [];
+    }
 
     if(isset($_POST['todoItem'])) {
-        $newTodo = [
+        $todoList[] = [
             'text' => $_POST['todoItem'],
             'done' => false
         ];
 
-        array_push($todoList, $newTodo);
+        $myString = json_encode($todoList); // trasformo in codice json la mia array associativo
+        file_put_contents('database.json', $myString); // creo un file esterno con la mia array decodificata
 
     } 
 
