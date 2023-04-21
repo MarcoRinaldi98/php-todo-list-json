@@ -17,18 +17,47 @@ createApp({
                     this.todoList = response.data;
                 })
         },
-        // Funzione per aggiungere elementi all'array contenente la lista di todo in script.php
+        // Funzione per aggiungere elementi all'array contenente la lista di todo
         addTodo() {
             const data = {
                 todoItem: this.todoItem
             };
+
             axios.post('script.php', data,
                 {
-                    headers: { 'Content-Type': 'multipart/form-data' }
+                    headers: { 'Content-Type': 'multipart/form-data' } // Per farlo funzionare come se fosse un form 
                 }
             ).then(response => {
                 this.todoList = response.data;
                 this.todoItem = '';
+            })
+        },
+        // Funzione per rimuovere elementi all'array contenente la lista di todo
+        removeTodo(index) {
+            const data = {
+                removeTask: index
+            };
+
+            axios.post('script.php', data,
+                {
+                    headers: { 'Content-Type': 'multipart/form-data' } // Per farlo funzionare come se fosse un form 
+                }
+            ).then(response => {
+                this.todoList = response.data;
+            })
+        },
+        // Funzione per barrare il testo delle task con 'done' = true
+        toggleDone(index) {
+            const data = {
+                doneTask: index
+            };
+
+            axios.post('script.php', data,
+                {
+                    headers: { 'Content-Type': 'multipart/form-data' } // Per farlo funzionare come se fosse un form 
+                }
+            ).then(response => {
+                this.todoList = response.data;
             })
         }
     },

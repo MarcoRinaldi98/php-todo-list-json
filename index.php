@@ -19,16 +19,20 @@
     <div id="app" class="p-2 my-5 border border-primary bg-primary-subtle rounded-3">
         <div class="container-sm py-5">
 
-        <ul class="list-group">
-            <li v-for="(todo, index) in todoList" class="list-group-item ms_point d-flex justify-content-between align-items-center" :key="index">
-                <p class="m-0 p-0" :class="{'text-decoration-line-through': todo.done}" @click="todo.done? todo.done = false: todo.done = true">{{ todo.text }}</p>
-                <i class="fa-solid fa-trash p-2 text-danger"></i>
-            </li>
-        </ul>
+            <h1 class="text-center ms_fs-50 text-primary">ToDo List</h1>
+            
+            <ul class="list-group">
+                <li v-for="(todo, index) in todoList" class="list-group-item ms_point d-flex justify-content-between align-items-center" :key="index">
+                    <p class="m-0 p-0" :class="{'text-decoration-line-through': todo.done}" @click="toggleDone(index)">{{ todo.text }}</p>
+                    <i class="fa-solid fa-trash p-2 text-danger" @click="removeTodo(index)"></i>
+                </li>
+            </ul>
 
-        <div class="input-group mt-3">
-            <input type="text" class="form-control" v-model="todoItem" />
-            <button @click="addTodo" class="btn btn-outline-primary" type="button">Add ToDo</button>
+            <div class="input-group mt-3">
+                <input type="text" class="form-control" v-model="todoItem" />
+                <button @click="addTodo" class="btn btn-outline-primary" type="button">Add ToDo</button>
+            </div>
+
         </div>
     </div>
 

@@ -14,3 +14,7 @@ html {
 .ms_point {
     cursor: pointer;
 }
+
+.ms_fs-50 {
+    font-size: 80px;
+}
