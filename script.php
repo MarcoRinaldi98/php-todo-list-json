@@ -21,14 +21,14 @@
         unset($todoList[$todoIndex]);
 
         $myString = json_encode($todoList); // trasformo in codice json la mia array associativo
-        file_put_contents("todo.json", $myString); // creo un file esterno con la mia array decodificata
+        file_put_contents("database.json", $myString); // creo un file esterno con la mia array decodificata
 
     } elseif (isset($_POST["doneTask"])) {
         $taskIndex = $_POST["doneTask"];
         $todoList[$taskIndex]["done"] = !$todoList[$taskIndex]["done"];
         
         $myString = json_encode($todoList); // trasformo in codice json la mia array associativo
-        file_put_contents("todo.json", $myString); // creo un file esterno con la mia array decodificata
+        file_put_contents("database.json", $myString); // creo un file esterno con la mia array decodificata
     }
 
     header('Conent-Type: application/json'); //specifico al broswer che deve utilizzare questa informazione come JSON

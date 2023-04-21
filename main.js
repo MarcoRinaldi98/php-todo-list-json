@@ -34,6 +34,7 @@ createApp({
         },
         // Funzione per rimuovere elementi all'array contenente la lista di todo
         removeTodo(index) {
+            console.log(index);
             const data = {
                 removeTask: index
             };
@@ -48,6 +49,7 @@ createApp({
         },
         // Funzione per barrare il testo delle task con 'done' = true
         toggleDone(index) {
+            console.log(index);
             const data = {
                 doneTask: index
             };
