@@ -1,1 +1,42 @@
-[{"text":"HTML","done":false},{"text":"CSS","done":false},{"text":"BOOTSTRAP","done":false},{"text":"JAVASCRIPT","done":false},{"text":"NODE","done":false},{"text":"VUE","done":false},{"text":"VITE","done":false},{"text":"PHP","done":false},{"text":"SQL","done":false},{"text":"LARAVEL","done":false}]
+[
+    {
+        "text": "HTML",
+        "done": false
+    },
+    {
+        "text": "CSS",
+        "done": false
+    },
+    {
+        "text": "BOOTSTRAP",
+        "done": false
+    },
+    {
+        "text": "JAVASCRIPT",
+        "done": false
+    },
+    {
+        "text": "NODE",
+        "done": false
+    },
+    {
+        "text": "VUE",
+        "done": false
+    },
+    {
+        "text": "VITE",
+        "done": false
+    },
+    {
+        "text": "PHP",
+        "done": false
+    },
+    {
+        "text": "SQL",
+        "done": false
+    },
+    {
+        "text": "LARAVEL",
+        "done": false
+    }
+]
